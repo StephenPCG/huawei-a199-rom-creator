@@ -1,1 +1,5 @@
 *.swp
+work/
+rom/
+output/
+UPDATE.APP
