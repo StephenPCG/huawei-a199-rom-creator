@@ -72,7 +72,7 @@
 + Mms.apk
 - MyCalendar.apk
 - MyEmail.apk
-+ NetworkLocation.apk
+- NetworkLocation.apk       gapps also provided this
 + NoiseField.apk
 + OMACP.apk
 + PackageInstaller.apk
@@ -85,7 +85,7 @@
 + ProjectMenuAct.apk
 - Protips.apk
 + Provision.apk
-+ QuickSearchBox.apk
+- QuickSearchBox.apk       gapps also provided this
 + ScreenovateProtocolsPack.apk
 + ScreenovateService.apk
 + Settings.apk
