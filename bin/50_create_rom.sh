@@ -21,8 +21,6 @@ MAKE_EXT4FS="$EXT4_UTILS_PATH/make_ext4fs"
 IMG2SIMG="$EXT4_UTILS_PATH/img2simg"
 
 echo "creating system.ext4..."
-sudo $MAKE_EXT4FS -l 900m -s -a system $__rom_dir/system.ext4 $__work_dir/system
-echo "convering system.ext4 --> system.img"
-sudo $IMG2SIMG $__rom_dir/system.ext4 $__rom_dir/system.img
+sudo $MAKE_EXT4FS -l 900m -s -a system $__rom_dir/system.img $__work_dir/system
 
 # vim:ai:et:sts=4:sw=4:
