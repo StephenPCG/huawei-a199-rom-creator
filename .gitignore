@@ -3,3 +3,11 @@ work/
 rom/
 output/
 UPDATE.APP
+
+*.o
+*.a
+ext2simg
+img2simg
+simg2simg
+simg2img
+make_ext4fs
