@@ -49,4 +49,41 @@ remove_apk() {
     sudo rm -f $apk_file
 }
 
+yes_or_no() {
+    promtp=$1
+    default=$2
+    case $default in
+        y|yes) p="(Y/n)" ;;
+        n|no)  p="(y/N)" ;;
+        *)     p="(y/n)" ;;
+    esac
+    yn=
+    while [ -z "$yn" ]; do
+        read -p "$promtp $p" yn
+        if [ -z "$yn" -a -n "$default" ]; then yn=$default; fi
+        if [ "$yn" == y ]; then return 0; fi
+        if [ "$yn" == yes ]; then return 0; fi
+        if [ "$yn" == n ]; then return 1; fi
+        if [ "$yn" == no ]; then return 1; fi
+        yn=
+    done
+}
+
+prop_get() {
+    prop_file=$1
+    key=$2
+    awk -F= "/^$key=/{print \$2}" $prop_file
+}
+
+prop_set() {
+    prop_file=$1
+    key=$2
+    value=$3
+    if grep -qE "^$key=" $prop_file; then
+        sudo sed -i "s/^$key=.\+/$key=$value/" $prop_file
+    else
+        echo "$key=$value" | sudo tee -a $prop_file
+    fi
+}
+
 # vim:ai:et:sts=4:sw=4:ft=sh

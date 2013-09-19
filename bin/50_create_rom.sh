@@ -20,7 +20,10 @@ popd >/dev/null 2>&1
 MAKE_EXT4FS="$EXT4_UTILS_PATH/make_ext4fs"
 IMG2SIMG="$EXT4_UTILS_PATH/img2simg"
 
-echo "creating system.ext4..."
+echo "creating system.img ..."
 sudo $MAKE_EXT4FS -l 900m -s -a system $__rom_dir/system.img $__work_dir/system
+
+echo "creating cust.img ..."
+sudo $MAKE_EXT4FS -l 100m -s -a cust $__rom_dir/cust.img $__work_dir/cust
 
 # vim:ai:et:sts=4:sw=4:

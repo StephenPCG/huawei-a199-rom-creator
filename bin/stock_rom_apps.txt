@@ -47,13 +47,13 @@
 + HwMultiscreen.apk
 + HwNotePad.apk
 + HwNumLocation.apk
-+ HwOUC.apk
+- HwOUC.apk                 Online Update Center
 + HwPowerGenieEngine.apk
 + HwPowerManager.apk
 + HwProfileSwitcher.apk
 + HwPushService.apk
 + HwSoundRecorder.apk
-+ HwStartupGuide.apk
+- HwStartupGuide.apk        Startup Guide and Legalcy
 + HwThemeManager.apk
 + HwToolBox.apk
 + HwWallpaper6.apk

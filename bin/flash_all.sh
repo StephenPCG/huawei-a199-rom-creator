@@ -10,7 +10,7 @@ __output_dir=$__root_dir/output
 pushd $__rom_dir >/dev/null 2>&1
 
 echo "rebooting to bootloader..."
-#sudo adb reboot-bootloader
+sudo adb reboot-bootloader
 
 flashimg() {
     imgname=$1
