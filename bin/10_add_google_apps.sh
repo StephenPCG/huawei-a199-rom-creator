@@ -16,12 +16,17 @@ if [ ! -e "$gapps_zip" ]; then
     exit 1
 fi
 
-excludes=( "system/app/GenieWidget.apk" )   # weather and news
-excludes=( ${excludes[@]} system/app/GoogleFeedback.apk )
 excludes=( ${excludes[@]} 'system/tts/*' )
 excludes=( ${excludes[@]} 'optional/*' )
 excludes=( ${excludes[@]} 'META-INF/*' )
 excludes=( ${excludes[@]} 'install-optional.sh' )
+excludes=( "system/app/GenieWidget.apk" )                   # weather and news
+excludes=( ${excludes[@]} system/app/GoogleFeedback.apk )
+excludes=( ${excludes[@]} system/app/MediaUploader.apk )    # Picasa Uploader
+excludes=( ${excludes[@]} system/app/GoogleEars.apk )       # Sound Search for Google Play
+# include system/app/Thinkfree.apk         # Document Viewer v4.2.120504
+# include system/app/Phonesky.apk          # Google Play Store v3.9.16
+# ?       system/app/Microbes.apk          # Microbes Live Wallpaper
 
 pushd $__work_dir >/dev/null 2>&1
 sudo unzip ../$gapps_zip -x ${excludes[@]}
