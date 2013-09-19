@@ -10,7 +10,7 @@ __output_dir=$__root_dir/output
 pushd $__rom_dir >/dev/null 2>&1
 
 echo "rebooting to bootloader..."
-sudo adb reboot-bootloader
+#sudo adb reboot-bootloader
 
 flashimg() {
     imgname=$1
@@ -26,12 +26,6 @@ flashimg userdata
 flashimg cust
 
 sudo fastboot reboot
-
-if [ ! -e "userdata.img" ]; then
-    echo "rebooting to recovery ..."
-    sudo adb wait-for-device
-    sudo adb reboot recovery
-fi
 
 popd >/dev/null 2>&1
 

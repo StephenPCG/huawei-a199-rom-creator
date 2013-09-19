@@ -1,0 +1,52 @@
+# $__root_dir should be set before source this file
+
+if [ -z "$__root_dir" ]; then
+    echo "\$__root_dir not set before sourcing this file"
+    exit 1
+fi
+
+__work_dir=$__root_dir/work
+__rom_dir=$__root_dir/rom
+__output_dir=$__root_dir/output
+__cm_dir=$__root_dir/cm/
+
+prepared() {
+    if grep -q $__work_dir /proc/mounts; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+install_apk() {
+    apk_file=$1
+    system_dir=$2
+
+    if [ ! -f "$apk_file" ]; then echo "$apk_file does not exist."; return; fi
+    if [ ! -d "$system_dir" ]; then echo "$system_dir does not exist."; return; fi
+
+    sudo cp -fv $apk_file $system_dir/app/
+    sudo chown -v 0.0 $system_dir/app/$(basename $apk_file)
+    for so_file in `unzip -t $apk_file | grep -Eo ' lib/.+\.so'`; do
+        echo "installing $so_file ..."
+        # sudo unzip $apk_file $so_file -d $system_dir
+    done
+}
+
+remove_apk() {
+    apk_file=$1
+    if [ ! -f "$apk_file" ]; then echo "$apk_file does not exist."; return; fi
+    system_dir=$(dirname $(dirname $apk_file))
+
+    for so_file in `unzip -t $apk_file | grep -Eo ' lib/.+\.so'`; do
+        so_file=$system_dir/$so_file
+        if [ -e $so_file ]; then
+            echo "removing $so_file from $apk_file ..."
+            sudo rm -f $so_file
+        fi
+    done
+    echo "removing $apk_file ..."
+    sudo rm -f $apk_file
+}
+
+# vim:ai:et:sts=4:sw=4:ft=sh

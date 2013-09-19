@@ -5,15 +5,11 @@ __root_dir=$(dirname $__script_dir)
 
 pushd $__root_dir >/dev/null 2>&1
 
-__work_dir=$__root_dir/work
-__rom_dir=$__root_dir/rom
-__output_dir=$__root_dir/output
+source $__script_dir/common
 
-echo "checking if any folder is mounted in $__work_dir ..."
-if `mount | grep -q $__work_dir`; then
-    echo "some folders are mounted in $__work_dir"
-    mount | grep $__work_dir
-    exit 1
+if prepared; then
+    echo "already prepared, doing nothing."
+    exit 0
 fi
 
 echo "clearing $__work_dir and $__rom_dir ..."
@@ -35,11 +31,15 @@ $__script_dir/split_updata.py -u $app_file
 
 echo "mounting work/system/ ..."
 mkdir -pv $__work_dir/system
-sudo mount -o loop output/system.img $__work_dir/system
+sudo mount -o loop $__output_dir/system.img $__work_dir/system
 
 echo "mouting work/cust/..."
 mkdir -pv $__work_dir/cust
-sudo mount -o loop output/cust.img $__work_dir/cust
+sudo mount -o loop $__output_dir/cust.img $__work_dir/cust
+
+cp -v $__output_dir/boot.img $__rom_dir/boot.img
+cp -v $__output_dir/recovery.img $__rom_dir/recovery.img
+cp -v $__output_dir/userdata.img $__rom_dir/userdata.img
 
 popd $__root_dir >/dev/null 2>&1
 
