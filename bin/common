@@ -98,7 +98,7 @@ prop_set() {
     if grep -qE "^$key=" $prop_file; then
         sudo sed -i "s/^$key=.\+/$key=$value/" $prop_file
     else
-        echo "$key=$value" | sudo tee -a $prop_file
+        echo "$key=$value" | sudo tee -a $prop_file >/dev/null
     fi
 }
 
@@ -115,7 +115,7 @@ defaults_xml_set() {
     key=$3
     val=$4
     if grep -qE "$key\s*=\s*[^/]+" $xml; then
-        sudo sed -i "s#^.\+$key\s*=\s*[^/]\+#    <$typ $key = \"$val\"#" $xml
+        sudo sed -i "s#^.\+$key\s*=\s*.\+/>#    <$typ $key = \"$val\" />#" $xml
     else
         sudo sed -i "s#<\/resources>#    <$typ $key = \"$val\" />\n<\/resources>#" $xml
     fi

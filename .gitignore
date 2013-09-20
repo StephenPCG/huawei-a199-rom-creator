@@ -19,3 +19,6 @@ gapps-jb-20121011-signed.zip
 
 .romversion
 .testing
+
+tools/busybox_files/busybox1.20.2
+tools/themes/*.hwt

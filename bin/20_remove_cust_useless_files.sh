@@ -13,7 +13,7 @@ fi
 
 while read file; do
     file=$__work_dir/cust/$file
-    if [ -e "$file" ]; then
+    if [ -f "$file" ]; then
         sudo rm -vf $file
     elif [ -d "$file" ]; then
         sudo rm -vfr $file
@@ -21,6 +21,8 @@ while read file; do
 done <<EOF
 chinatelecom/cn/cdrom/autorun.iso
 chinatelecom/cn/pcmodem/autorun.iso
+chinatelecom/cn/wallpaper/
+chinatelecom/cn/media/
 EOF
 
 # vim:ai:et:sts=4:sw=4:

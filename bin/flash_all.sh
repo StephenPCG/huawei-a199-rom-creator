@@ -18,21 +18,25 @@ flashimg() {
     fi
 }
 
-if yes_or_no "Wipe userdata?" n; then
-    wipe_userdata=yes
-else
-    wipe_userdata=no
-fi
+#if yes_or_no "Wipe userdata?" n; then
+#    wipe_userdata=yes
+#else
+#    wipe_userdata=no
+#fi
 
 flashimg boot
 flashimg recovery
 flashimg system
+flashimg userdata
 flashimg cust
-if [ "$wipe_userdata" == yes ]; then
-    flashimg userdata
-fi
+
+sudo fastboot reboot-bootloader
+exit 0
 
 sudo fastboot reboot
+
+sudo adb wait-for-device
+sudo adb reboot recovery
 
 popd >/dev/null 2>&1
 

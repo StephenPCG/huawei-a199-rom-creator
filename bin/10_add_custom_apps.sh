@@ -24,4 +24,11 @@ for apk_file in $__root_dir/tools/customapps/*.apk; do
     install_apk $apk_file $__work_dir/system/
 done
 
+for theme in $__root_dir/tools/themes/*.hwt; do
+    if [ -e "$theme" ]; then
+        sudo cp -v $theme $__work_dir/system/themes/
+    fi
+    sudo chown -v -R 0.0 $__work_dir/system/themes/
+done
+
 # vim:ai:et:sts=4:sw=4:

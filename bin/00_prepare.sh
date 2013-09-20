@@ -36,9 +36,13 @@ echo "mouting work/cust/..."
 mkdir -pv $__work_dir/cust
 sudo mount -o loop $__output_dir/cust.img $__work_dir/cust
 
+echo "mouting work/userdata/..."
+mkdir -pv $__work_dir/userdata
+sudo simg2img $__output_dir/userdata.img $__output_dir/userdata.ext4
+sudo mount -o loop $__output_dir/userdata.ext4 $__work_dir/userdata
+
 cp -v $__output_dir/boot.img $__rom_dir/boot.img
 cp -v $__output_dir/recovery.img $__rom_dir/recovery.img
-cp -v $__output_dir/userdata.img $__rom_dir/userdata.img
 
 popd $__root_dir >/dev/null 2>&1
 

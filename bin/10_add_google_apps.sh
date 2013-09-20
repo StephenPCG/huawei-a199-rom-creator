@@ -29,6 +29,9 @@ excludes=( ${excludes[@]} 'system/app/GoogleEars.apk' )         # Sound Search f
 excludes=( ${excludes[@]} 'system/app/Phonesky.apk' )           # Google Play Store v3.9.16, we have newer version from customapps
 excludes=( ${excludes[@]} 'system/app/OneTimeInitializer.apk' ) # seems not needed
 excludes=( ${excludes[@]} 'system/app/SetupWizard.apk' )        # not actually needed
+excludes=( ${excludes[@]} 'system/app/VoiceSearchStub.apk' )    # voice search
+excludes=( ${excludes[@]} 'system/app/GooglePartnerSetup.apk' )
+excludes=( ${excludes[@]} 'system/app/Talkback.apk' )
 
 # include system/app/Thinkfree.apk         # Document Viewer v4.2.120504
 # ?       system/app/Microbes.apk          # Microbes Live Wallpaper

@@ -23,31 +23,31 @@
 - Email.apk
 + Exchange2.apk
 + Galaxy4.apk                       Black Hole v1.0
-+ Gallery2.apk                      Gallery v1.1.40000
++ Gallery2.apk                      Gallery v1.1.40000 (Camera)
 + GattAlertProfiles.apk             com.ti.bluetooth.gatt.alertprofiles
 - HandWritingSimpPack.apk
 + HTMLViewer.apk
-+ HwAllBackup.apk                   Backup v6.2.45, could be removed
+- HwAllBackup.apk                   Backup v6.2.45, could be removed
 - HwAppObserver.apk                 Third party applications observer
 + HwBluetoothImport.apk             Bluetooth PBAP v5.2.016
 - HwCameraHelp.apk                  com.android.hwcamerahelp v1.0
-+ HWCardManager.apk                 Dual card settings v1.0
-+ HwDeskClock.apk                   Clock v6.1.01
+- HWCardManager.apk                 Dual card settings v1.0
+- HwDeskClock.apk                   Clock v6.1.01
 - HwDLNA.apk                        com.huawei.android.dlna vv1.2.637
-+ HwFileManager.apk                 HW File Manager v4.1.45
-+ HwFlashlight.apk                  HW Flashlight v1.0
+- HwFileManager.apk                 HW File Manager v4.1.45
+- HwFlashlight.apk                  HW Flashlight v1.0
 + HwFMRadio.apk                     HW FM Radio
 + HwGPMS.apk                        com.huawei.android.gpms v1.0
 - HwIME.apk                         HW Input Method v6.1.36
-+ HwLauncher6.apk
-+ HwLockScreen.apk
+- HwLauncher6.apk                   EmotionUI, remove it since there is an update
+- HwLockScreen.apk                  
 - HwMediaCenter.apk         HW Music vV4.3.12
-+ HwMultiscreen.apk
+- HwMultiscreen.apk
 - HwNotePad.apk             HW Notes vJB_HwNotePad_V100R001C00B006
 + HwNumLocation.apk         Call Number Location
 - HwOUC.apk                 Online Update Center
-+ HwPowerGenieEngine.apk    Power Genie v2.6.4
-+ HwPowerManager.apk        Power Manager v1.6.0
+- HwPowerGenieEngine.apk    Power Genie v2.6.4
+- HwPowerManager.apk        Power Manager v1.6.0
 + HwProfileSwitcher.apk     Profiles (com.huawei.android.ProfileSwitcher)
 - HwPushService.apk         HW Push Service v2.3.17
 + HwSoundRecorder.apk
@@ -59,8 +59,6 @@
 + InputDevices.apk
 + KeyChain.apk
 + LatinIME.apk
-+ LiveWallpapers.apk
-+ LiveWallpapersPicker.apk
 + MediaProvider.apk
 + MMIFunctionTest.apk
 + MMITest_II.apk
@@ -98,10 +96,12 @@
 - yituisong.apk
 + HwThemeManager.apk        Themes v6.1.38
 # themes
-+ NoiseField.apk            Bubble v1.0
-+ HoloSpiralWallpaper.apk   com.android.wallpaper.holospiral v4.1.2-eng
-+ MagicSmokeWallpapers.apk  Magic Smoke Wallpapers
-+ HwMeWidget.apk            Me Widget v6.1.77
-+ VisualizationWallpapers.apk  Music Visualization Wallpapers
+- NoiseField.apk            Bubble v1.0
+- HoloSpiralWallpaper.apk   com.android.wallpaper.holospiral v4.1.2-eng
+- MagicSmokeWallpapers.apk  Magic Smoke Wallpapers
+- HwMeWidget.apk            Me Widget v6.1.77   remove it since there is update
+- VisualizationWallpapers.apk  Music Visualization Wallpapers
 + PhaseBeam.apk             Phase Beam ?theme?
-+ HwWallpaper6.apk          Wallpapers
+- HwWallpaper6.apk          Wallpapers
+- LiveWallpapers.apk
+- LiveWallpapersPicker.apk
