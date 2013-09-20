@@ -16,7 +16,7 @@ if [ "$__is_testing" == "true" ]; then
 fi
 for apk_file in $__root_dir/tools/customapps/*.apk; do
     if [ "$__is_testing" != "true" ]; then
-        if [[ "$apk_file" == test* ]]; then
+        if [[ "$(basename $apk_file)" == test* ]]; then
             echo "not in testing mode, skip $apk_file"
             continue
         fi
@@ -28,7 +28,7 @@ for theme in $__root_dir/tools/themes/*.hwt; do
     if [ -e "$theme" ]; then
         sudo cp -v $theme $__work_dir/system/themes/
     fi
-    sudo chown -v -R 0.0 $__work_dir/system/themes/
 done
+sudo chown -v -R 0.0 $__work_dir/system/themes/
 
 # vim:ai:et:sts=4:sw=4:

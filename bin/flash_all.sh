@@ -18,12 +18,6 @@ flashimg() {
     fi
 }
 
-#if yes_or_no "Wipe userdata?" n; then
-#    wipe_userdata=yes
-#else
-#    wipe_userdata=no
-#fi
-
 flashimg boot
 flashimg recovery
 flashimg system

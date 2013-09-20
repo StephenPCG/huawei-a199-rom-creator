@@ -7,7 +7,7 @@
 + BluetoothMapEmailBinder.apk      Android Email Map Service
 + Browser.apk                      Browser v4.1.2-eng
 - Calculator.apk                    use CM one
-+ Calendar.apk                      Calendar vJB_Calendar_V100R001C00B009
+- Calendar.apk                      Calendar vJB_Calendar_V100R001C00B009
 + CalendarProvider.apk              Calendar Storage vJB_Calendar_V100R001C00B009
 + CallWaiting.apk                   CallWating v4.1.2
 - CangjiePack.apk
@@ -60,14 +60,14 @@
 + KeyChain.apk
 + LatinIME.apk
 + MediaProvider.apk
-+ MMIFunctionTest.apk
-+ MMITest_II.apk
+- MMIFunctionTest.apk
+- MMITest_II.apk
 + Mms.apk                           Messaging v4.1.2-eng
 - MyCalendar.apk
 - MyEmail.apk
 - NetworkLocation.apk               gapps also provided this
 + OMACP.apk                         Provisioning message
-+ PackageInstaller.apk
+- PackageInstaller.apk              Seems gapps also provided such function, so remove it
 + PGPSDownloader.apk                Rx Networks PGPS Seed Downloader v6.2.10.1
 + Phone.apk
 + PicoTts.apk                       Pico TTS v1.0 com.svox pico
@@ -101,7 +101,7 @@
 - MagicSmokeWallpapers.apk  Magic Smoke Wallpapers
 - HwMeWidget.apk            Me Widget v6.1.77   remove it since there is update
 - VisualizationWallpapers.apk  Music Visualization Wallpapers
-+ PhaseBeam.apk             Phase Beam ?theme?
+- PhaseBeam.apk             Phase Beam ?theme?
 - HwWallpaper6.apk          Wallpapers
 - LiveWallpapers.apk
 - LiveWallpapersPicker.apk

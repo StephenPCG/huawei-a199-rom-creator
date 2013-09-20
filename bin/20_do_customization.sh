@@ -15,10 +15,6 @@ SYSTEM_PROP=$__work_dir/system/build.prop
 CUST_PROP=$__work_dir/cust/chinatelecom/cn/prop/local.prop
 DEFAULTS_XML=$__work_dir/cust/chinatelecom/cn/xml/hw_defaults.xml
 
-cp -v $SYSTEM_PROP /tmp/build.prop
-cp -v $CUST_PROP /tmp/local.prop
-cp -v $DEFAULTS_XML /tmp/hw_defaults.xml
-
 # show battery_percent
 echo "[custom] show battery percent"
 prop_set $CUST_PROP ro.config.hw_battery_percent true
@@ -47,8 +43,6 @@ prop_set $CUST_PROP ro.config.hw_support_ipcall false
 echo "[custom] status bar AM/PM style: none"
 prop_set $CUST_PROP ro.config.AM_PM_STYLE 2
 prop_set $SYSTEM_PROP ro.config.AM_PM_STYLE 2
-# default use 24h format
-defaults_xml_set $DEFAULTS_XML settings.system.time_12_24 24
 
 # enable GSM
 echo "[custom] enable gsm"
@@ -63,12 +57,8 @@ sudo cp -vf $__root_dir/tools/cust/hw_launcher_default_workspace.xml $__work_dir
 
 ## set default theme
 if [ -e "$__work_dir/system/themes/Taste.hwt" ]; then
-    echo use theme: Taste.hwt
+    echo "[custom] use theme: Taste.hwt"
     defaults_xml_set $DEFAULTS_XML string hw_def_theme /system/themes/Taste.hwt
 fi
-
-# change emui version
-#prop_set $CUST_PROP ro.build.version.emui 1.6
-#prop_set $SYSTEM_PROP ro.build.version.emui 1.6
 
 # vim:ai:et:sts=4:sw=4:

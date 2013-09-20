@@ -32,6 +32,7 @@ excludes=( ${excludes[@]} 'system/app/SetupWizard.apk' )        # not actually n
 excludes=( ${excludes[@]} 'system/app/VoiceSearchStub.apk' )    # voice search
 excludes=( ${excludes[@]} 'system/app/GooglePartnerSetup.apk' )
 excludes=( ${excludes[@]} 'system/app/Talkback.apk' )
+excludes=( ${excludes[@]} 'system/app/QuickSearchBox.apk' )
 
 # include system/app/Thinkfree.apk         # Document Viewer v4.2.120504
 # ?       system/app/Microbes.apk          # Microbes Live Wallpaper
