@@ -5,10 +5,23 @@ if [ -z "$__root_dir" ]; then
     exit 1
 fi
 
+# get abs_path of __root_dir
+pushd $__root_dir >/dev/null
+__root_dir=$(pwd)
+popd >/dev/null
+__script_dir=$__root_dir/bin
+
 __work_dir=$__root_dir/work
-__rom_dir=$__root_dir/rom
+#__rom_dir=$__root_dir/rom
 __output_dir=$__root_dir/output
 __cm_dir=$__root_dir/cm/
+
+if [ -r "$__root_dir/romversion" ]; then
+    __rom_ver="$(cat $__root_dir/romversion 2>/dev/null)"
+fi
+__rom_ver=${__rom_ver:-$(date +%Y%m%d_%H%M%S)}
+__rom_dir=$__root_dir/rom/$__rom_ver
+
 
 prepared() {
     if grep -q $__work_dir /proc/mounts; then

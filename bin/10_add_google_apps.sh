@@ -5,9 +5,12 @@ __root_dir=$(dirname $__script_dir)
 
 pushd $__root_dir >/dev/null 2>&1
 
-__work_dir=$__root_dir/work
-__rom_dir=$__root_dir/rom
-__output_dir=$__root_dir/output
+source $__script_dir/common
+
+if ! prepared; then
+    echo "not prepared, please run $__script_dir/00_prepare.sh first."
+    exit 1
+fi
 
 gapps_zip="gapps-jb-20121011-signed.zip"
 
@@ -16,14 +19,14 @@ if [ ! -e "$gapps_zip" ]; then
     exit 1
 fi
 
-excludes=( ${excludes[@]} 'system/tts/*' )
+excludes=( 'system/tts/*' )
 excludes=( ${excludes[@]} 'optional/*' )
 excludes=( ${excludes[@]} 'META-INF/*' )
 excludes=( ${excludes[@]} 'install-optional.sh' )
-excludes=( "system/app/GenieWidget.apk" )                   # weather and news
-excludes=( ${excludes[@]} system/app/GoogleFeedback.apk )
-excludes=( ${excludes[@]} system/app/MediaUploader.apk )    # Picasa Uploader
-excludes=( ${excludes[@]} system/app/GoogleEars.apk )       # Sound Search for Google Play
+excludes=( ${excludes[@]} 'system/app/GenieWidget.apk' )                   # weather and news
+excludes=( ${excludes[@]} 'system/app/GoogleFeedback.apk' )
+excludes=( ${excludes[@]} 'system/app/MediaUploader.apk' )    # Picasa Uploader
+excludes=( ${excludes[@]} 'system/app/GoogleEars.apk' )       # Sound Search for Google Play
 # include system/app/Thinkfree.apk         # Document Viewer v4.2.120504
 # include system/app/Phonesky.apk          # Google Play Store v3.9.16
 # ?       system/app/Microbes.apk          # Microbes Live Wallpaper

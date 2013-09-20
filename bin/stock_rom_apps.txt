@@ -6,7 +6,7 @@
 - BluetoothFtps.apk                FTP Server v1.0
 + BluetoothMapEmailBinder.apk      Android Email Map Service
 + Browser.apk                      Browser v4.1.2-eng
-+ Calculator.apk
+- Calculator.apk                    use CM one
 - Calendar.apk                      Calendar vJB_Calendar_V100R001C00B009
 + CalendarProvider.apk              Calendar Storage vJB_Calendar_V100R001C00B009
 + CallWaiting.apk                   CallWating v4.1.2

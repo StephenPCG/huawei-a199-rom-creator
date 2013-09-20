@@ -1,0 +1,7 @@
+List as of: 2013-09-20 10:12:58
+all files are taken from Google Play Store
+----- BEGIN ----
+606c598c38aa7c15e6f814b327c30c68  CyanogenmodCalculator-3.4.2.apk
+46e8a1fa726b8d6ee85cf82f34ac1bd6  GooglePlayServices-3.2.64.apk
+1918e4b9fe5d1bc63e7c86588982b7af  GooglePlayStore-4.3.11.apk
+-----  END  ----
