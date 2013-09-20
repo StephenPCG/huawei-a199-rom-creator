@@ -1,7 +1,21 @@
-List as of: 2013-09-20 10:12:58
-all files are taken from Google Play Store
------ BEGIN ----
+ls:
+total 37896
+-rw-r--r-- 1  868075 Sep 20 00:21 CyanogenmodCalculator-3.4.2.apk
+-rw-r--r-- 1 8180489 Sep 20 00:21 GooglePlayServices-3.2.64.apk
+-rw-r--r-- 1 6038575 Sep 20 00:21 GooglePlayStore-4.3.11.apk
+-rw-r--r-- 1  427046 Sep 21 01:49 HWCardManager.apk
+-rw-r--r-- 1 2166490 Jul 19 10:23 HwLauncher6.apk
+-rw-r--r-- 1 8913227 Jul 18 10:52 HwLockScreen.apk
+-rw-r--r-- 1 8238433 Jul 19 10:23 HwMeWidget.apk
+-rw-r--r-- 1 3949826 Sep 21 00:25 testESFileManager-3.5.0.3.apk
+
+md5:
+
 606c598c38aa7c15e6f814b327c30c68  CyanogenmodCalculator-3.4.2.apk
 46e8a1fa726b8d6ee85cf82f34ac1bd6  GooglePlayServices-3.2.64.apk
 1918e4b9fe5d1bc63e7c86588982b7af  GooglePlayStore-4.3.11.apk
------  END  ----
+c2d46496f2beffd02279855aef28d16f  HWCardManager.apk
+1f2b80b27e3a59bd5723c31fa4fb8dc0  HwLauncher6.apk
+23bb81c01c3fe5804b6eb8aa996577cf  HwLockScreen.apk
+72d62ae8f2540f1f6457352b45b89064  HwMeWidget.apk
+95d772bac4604cbf02cfdae29b449086  testESFileManager-3.5.0.3.apk
