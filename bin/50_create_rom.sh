@@ -2,15 +2,11 @@
 
 __script_dir=$(dirname $0)
 __root_dir=$(dirname $__script_dir)
+source $__script_dir/common
 
 pushd $__root_dir >/dev/null 2>&1
 
-__work_dir=$__root_dir/work
-__rom_dir=$__root_dir/rom
-__output_dir=$__root_dir/output
-
-#PATH=`pwd`/ext4_utils/:$PATH
-EXT4_UTILS_PATH="$(pwd)/ext4_utils"
+EXT4_UTILS_PATH="$__root_dir/ext4_utils"
 
 pushd "$EXT4_UTILS_PATH" >/dev/null 2>&1
 echo "compiling ext4_utils ..."

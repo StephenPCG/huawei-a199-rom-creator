@@ -2,10 +2,9 @@
 
 __script_dir=$(dirname $0)
 __root_dir=$(dirname $__script_dir)
+source $__script_dir/common
 
 pushd $__root_dir >/dev/null 2>&1
-
-source $__script_dir/common
 
 if ! prepared; then
     echo "not prepared, please run $__script_dir/00_prepare.sh first."
@@ -47,6 +46,7 @@ else
 fi
 echo "Support ipcall: $(prop_get work/system/build.prop ro.config.hw_support_ipcall)"
 echo
+
 
 
 # vim:ai:et:sts=4:sw=4:

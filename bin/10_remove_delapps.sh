@@ -2,10 +2,9 @@
 
 __script_dir=$(dirname $0)
 __root_dir=$(dirname $__script_dir)
+source $__script_dir/common
 
 pushd $__root_dir >/dev/null 2>&1
-
-source $__script_dir/common
 
 if ! prepared; then
     echo "not prepared, please run $__script_dir/00_prepare.sh first."
@@ -19,7 +18,7 @@ if [ ! -d "$SYSTEM" ]; then
     exit 1
 fi
 
-echo "Removing $SYSTEM/delapp/\*.apk ..."
+echo "Removing $SYSTEM/delapp/*.apk ..."
 for apk_file in $SYSTEM/delapp/*.apk; do
     remove_apk $apk_file
 done

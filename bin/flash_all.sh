@@ -1,11 +1,10 @@
 #!/bin/bash
 
+set -e
+
 __script_dir=$(dirname $0)
 __root_dir=$(dirname $__script_dir)
-
-__work_dir=$__root_dir/work
-__rom_dir=$__root_dir/rom
-__output_dir=$__root_dir/output
+source $__script_dir/common
 
 pushd $__rom_dir >/dev/null 2>&1
 
