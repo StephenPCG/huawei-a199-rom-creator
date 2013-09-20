@@ -11,9 +11,9 @@ if ! prepared; then
     exit 1
 fi
 
-$SYSTEM_PROP=$__work_dir/system/build.prop
-$CUST_PROP=$__work_dir/cust/chinatelecom/cn/prop/local.prop
-$DEFAULTS_XML=$__work_dir/cust/chinatelecom/cn/xml/hw_defaults.xml
+SYSTEM_PROP=$__work_dir/system/build.prop
+CUST_PROP=$__work_dir/cust/chinatelecom/cn/prop/local.prop
+DEFAULTS_XML=$__work_dir/cust/chinatelecom/cn/xml/hw_defaults.xml
 
 # show battery_percent
 if yes_or_no "Show Battery Percent?" y; then
@@ -22,16 +22,16 @@ else
     prop_set $CUST_PROP ro.config.hw_battery_percent false
 fi
 defaults_xml_set $DEFAULTS_XML integer battery_percent_switch 1
-echo "Show Battery Percent: $(prop_get work/system/build.prop ro.config.hw_battery_percent)"
+echo "Show Battery Percent: $(prop_get $CUST_PROP ro.config.hw_battery_percent)"
 echo
 
 # change display version id
-curver=$(prop_get work/cust/chinatelecom/cn/prop/local.prop ro.build.display.id)
+curver=$(prop_get $CUST_PROP ro.build.display.id)
 read -p "Change Display Version id? [$curver]: " newver
 if [ -n "$newver" ]; then
     prop_set $CUST_PROP ro.build.display.id $newver
 fi
-echo "Display Version id: $(prop_get work/cust/chinatelecom/cn/prop/local.prop ro.build.display.id)"
+echo "Display Version id: $(prop_get $CUST_PROP ro.build.display.id)"
 echo
 
 # enable usb debugging by default
@@ -43,7 +43,8 @@ else
     defaults_xml_set $DEFAULTS_XML integer development_settings_enabled 0
 fi
 defaults_xml_set $DEFAULTS_XML integer hw_development_items_hide 1
-echo "Enable usb debugging by default: $(prop_get work/system/build.prop persist.service.adb.enable)"
+prop_set $CUST_PROP ro.default_usb_mode 2
+echo "Enable usb debugging by default: $(prop_get $CUST_PROP persist.service.adb.enable)"
 echo
 
 # disable ip call
@@ -57,6 +58,7 @@ echo
 
 # status bar AM/PM style: 0 - large font AM/PM; 1 - small font AM/PM; 2 - do not display
 prop_set $CUST_PROP ro.config.AM_PM_STYLE 2
+# default use 24h format
 defaults_xml_set $DEFAULTS_XML settings.system.time_12_24 24
 
 # enable GSM
@@ -66,5 +68,8 @@ defaults_xml_set $DEFAULTS_XML integer gsm_enable_ct 1
 
 # this do not matter since epush apk is removed
 prop_set $CUST_PROP ro.config.enable.telecom_epush false
+
+# copy hw_launcher_default_workspace.xml
+sudo cp -vf $__root_dir/tools/cust/hw_launcher_default_workspace.xml $__work_dir/cust/chinatelecom/cn/xml/
 
 # vim:ai:et:sts=4:sw=4:

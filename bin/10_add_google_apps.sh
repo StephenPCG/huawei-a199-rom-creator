@@ -11,7 +11,7 @@ if ! prepared; then
     exit 1
 fi
 
-gapps_zip="$__work_dir/tools/gapps-jb-20121011-signed.zip"
+gapps_zip="$__root_dir/tools/gapps-jb-20121011-signed.zip"
 
 if [ ! -e "$gapps_zip" ]; then
     echo "please download $gapps_zip and put it in this dir."
@@ -35,7 +35,7 @@ excludes=( ${excludes[@]} 'system/app/SetupWizard.apk' )        # not actually n
 
 pushd $__work_dir >/dev/null 2>&1
 set -f  # disable filename expansion temporarily
-sudo unzip -o ../$gapps_zip -x ${excludes[@]}
+sudo unzip -o $gapps_zip -x ${excludes[@]}
 set +f  # reenable filename expansion
 popd >/dev/null 2>&1
 

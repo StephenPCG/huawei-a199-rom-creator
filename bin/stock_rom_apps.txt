@@ -30,10 +30,10 @@
 + HwAllBackup.apk                   Backup v6.2.45, could be removed
 - HwAppObserver.apk                 Third party applications observer
 + HwBluetoothImport.apk             Bluetooth PBAP v5.2.016
-+ HwCameraHelp.apk                  com.android.hwcamerahelp v1.0
+- HwCameraHelp.apk                  com.android.hwcamerahelp v1.0
 + HWCardManager.apk                 Dual card settings v1.0
 + HwDeskClock.apk                   Clock v6.1.01
-+ HwDLNA.apk                        com.huawei.android.dlna vv1.2.637
+- HwDLNA.apk                        com.huawei.android.dlna vv1.2.637
 + HwFileManager.apk                 HW File Manager v4.1.45
 + HwFlashlight.apk                  HW Flashlight v1.0
 + HwFMRadio.apk                     HW FM Radio
