@@ -11,7 +11,7 @@ if ! prepared; then
     exit 1
 fi
 
-gapps_zip="gapps-jb-20121011-signed.zip"
+gapps_zip="$__work_dir/tools/gapps-jb-20121011-signed.zip"
 
 if [ ! -e "$gapps_zip" ]; then
     echo "please download $gapps_zip and put it in this dir."

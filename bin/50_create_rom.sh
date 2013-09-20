@@ -6,7 +6,7 @@ source $__script_dir/common
 
 pushd $__root_dir >/dev/null 2>&1
 
-EXT4_UTILS_PATH="$__root_dir/ext4_utils"
+EXT4_UTILS_PATH="$__root_dir/tools/ext4_utils"
 
 pushd "$EXT4_UTILS_PATH" >/dev/null 2>&1
 echo "compiling ext4_utils ..."

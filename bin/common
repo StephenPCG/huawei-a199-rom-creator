@@ -16,8 +16,8 @@ __work_dir=$__root_dir/work
 __output_dir=$__root_dir/output
 __cm_dir=$__root_dir/cm/
 
-if [ -r "$__root_dir/romversion" ]; then
-    __rom_ver="$(cat $__root_dir/romversion 2>/dev/null)"
+if [ -r "$__root_dir/.romversion" ]; then
+    __rom_ver="$(cat $__root_dir/.romversion 2>/dev/null)"
 fi
 __rom_ver=${__rom_ver:-$(date +%Y%m%d_%H%M%S)}
 __rom_dir=$__root_dir/rom/$__rom_ver
