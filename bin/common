@@ -22,6 +22,9 @@ fi
 __rom_ver=${__rom_ver:-$(date +%Y%m%d_%H%M%S)}
 __rom_dir=$__root_dir/rom/$__rom_ver
 
+if [ -e "$__root_dir/.testing" ]; then
+    __is_testing=true
+fi
 
 prepared() {
     if grep -q $__work_dir /proc/mounts; then
@@ -96,6 +99,25 @@ prop_set() {
         sudo sed -i "s/^$key=.\+/$key=$value/" $prop_file
     else
         echo "$key=$value" | sudo tee -a $prop_file
+    fi
+}
+
+# these two functions can only be used to get/set cust/chinatelecom/cn/xml/hw_defaults.xml
+defaults_xml_get() {
+    xml=$1
+    key=$2
+    grep -oE "$key\s*=\s*[^/]+" $xml | awk -F= '{print $2}' | tr '"' ' '
+}
+
+defaults_xml_set() {
+    xml=$1
+    typ=$2
+    key=$3
+    val=$4
+    if grep -qE "$key\s*=\s*[^/]+" $xml; then
+        sudo sed -i "s#^.\+$key\s*=\s*[^/]\+#    <$typ $key = \"$val\"#" $xml
+    else
+        sudo sed -i "s#<\/resources>#    <$typ $key = \"$val\" />\n<\/resources>#" $xml
     fi
 }
 
