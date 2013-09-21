@@ -31,6 +31,7 @@ excludes=( ${excludes[@]} 'system/app/OneTimeInitializer.apk' ) # seems not need
 excludes=( ${excludes[@]} 'system/app/SetupWizard.apk' )        # not actually needed
 excludes=( ${excludes[@]} 'system/app/VoiceSearchStub.apk' )    # voice search
 excludes=( ${excludes[@]} 'system/app/GooglePartnerSetup.apk' )
+excludes=( ${excludes[@]} 'system/app/Talk.apk' )               # google talk
 excludes=( ${excludes[@]} 'system/app/Talkback.apk' )
 excludes=( ${excludes[@]} 'system/app/QuickSearchBox.apk' )
 

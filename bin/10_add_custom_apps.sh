@@ -15,6 +15,7 @@ if [ "$__is_testing" == "true" ]; then
     echo "TESTING MODE!"
 fi
 for apk_file in $__root_dir/tools/customapps/*.apk; do
+    if [[ "$(basename $apk_file)" == remove* ]]; then continue; fi
     if [ "$__is_testing" != "true" ]; then
         if [[ "$(basename $apk_file)" == test* ]]; then
             echo "not in testing mode, skip $apk_file"

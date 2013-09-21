@@ -32,7 +32,7 @@
 + HwBluetoothImport.apk             Bluetooth PBAP v5.2.016
 - HwCameraHelp.apk                  com.android.hwcamerahelp v1.0
 - HWCardManager.apk                 Dual card settings v1.0
-+ HwDeskClock.apk                   Clock v6.1.01
+- HwDeskClock.apk                   Clock v6.1.01
 - HwDLNA.apk                        com.huawei.android.dlna vv1.2.637
 - HwFileManager.apk                 HW File Manager v4.1.45
 - HwFlashlight.apk                  HW Flashlight v1.0
@@ -50,7 +50,7 @@
 - HwPowerManager.apk        Power Manager v1.6.0
 + HwProfileSwitcher.apk     Profiles (com.huawei.android.ProfileSwitcher)
 - HwPushService.apk         HW Push Service v2.3.17
-+ HwSoundRecorder.apk
+- HwSoundRecorder.apk
 - HwStartupGuide.apk        Startup Guide and Legalcy
 + HwToolBox.apk
 - HwWeatherClock.apk                Weather

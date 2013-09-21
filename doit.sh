@@ -7,6 +7,7 @@ bin/10_remove_delapps.sh
 bin/10_remove_stockrom_apps.sh
 bin/10_add_google_apps.sh
 bin/10_add_custom_apps.sh
+bin/15_add_cm_apps.sh
 bin/20_remove_cust_useless_files.sh
 bin/20_get_root.sh
 bin/20_do_customization.sh
