@@ -22,3 +22,5 @@ gapps-jb-20121011-signed.zip
 
 tools/busybox_files/busybox1.20.2
 tools/themes/*.hwt
+
+backup/

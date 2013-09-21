@@ -32,7 +32,7 @@
 + HwBluetoothImport.apk             Bluetooth PBAP v5.2.016
 - HwCameraHelp.apk                  com.android.hwcamerahelp v1.0
 - HWCardManager.apk                 Dual card settings v1.0
-- HwDeskClock.apk                   Clock v6.1.01
++ HwDeskClock.apk                   Clock v6.1.01
 - HwDLNA.apk                        com.huawei.android.dlna vv1.2.637
 - HwFileManager.apk                 HW File Manager v4.1.45
 - HwFlashlight.apk                  HW Flashlight v1.0
@@ -67,7 +67,7 @@
 - MyEmail.apk
 - NetworkLocation.apk               gapps also provided this
 + OMACP.apk                         Provisioning message
-- PackageInstaller.apk              Seems gapps also provided such function, so remove it
++ PackageInstaller.apk              Seems gapps also provided such function, so remove it
 + PGPSDownloader.apk                Rx Networks PGPS Seed Downloader v6.2.10.1
 + Phone.apk
 + PicoTts.apk                       Pico TTS v1.0 com.svox pico
